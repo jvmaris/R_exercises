@@ -1,0 +1,8 @@
+whale.l <- lapply(chapter.raws.l,'[','whale')
+whales.m <- do.call(rbind,whale.l)
+whales.v <- as.vector(whales.m,1)
+ahab.l <- lapply(chapter.raws.l,'[','ahab')
+ahabs.m <- do.call(rbind,ahab.l)
+ahabs.v <- as.vector(ahabs.m,1)
+colnames(whales.ahabs.m) <- c("whale","ahab")
+barplot(whales.ahabs.m,beside=T,col="green")

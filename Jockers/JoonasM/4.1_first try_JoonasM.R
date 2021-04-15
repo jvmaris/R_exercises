@@ -1,0 +1,5 @@
+lapply(chapter.freqs.l, '[', 'queequeg')
+queequeg.l <- lapply(chapter.freqs.l, '[', 'queequeg')
+queequeg.m <- do.call(rbind,queequeg.l)
+colnames(queequeg.m) <- c("queequeg")
+barplot(queequeg.m,beside=T,col="red")
